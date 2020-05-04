@@ -1,0 +1,33 @@
+import java.util.*;
+import java.io.*;
+
+class Solution{
+	public static void main(String []argh)
+	{
+		Scanner in = new Scanner(System.in);
+		int n=in.nextInt();
+		in.nextLine();
+        HashMap<String, Integer> phoneBook = new HashMap<String, Integer>();
+		for(int i=0;i<n;i++)
+		{
+			String name=in.nextLine();
+			int phone=in.nextInt();
+			in.nextLine();
+            phoneBook.put(name, phone);         
+
+		}
+		while(in.hasNext())
+		{
+			String Rname=in.nextLine();//reading remaining name
+            if (phoneBook.containsKey(Rname)) {
+                System.out.println(Rname+"="+phoneBook.get(Rname));
+		}
+        else{
+            System.out.println("Not found");
+        }
+	}
+}
+}
+
+
+
